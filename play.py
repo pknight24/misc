@@ -1,7 +1,7 @@
 #for various small functions that I am playing around with
 import time
 import random
-
+#eat some dick bro
 def fib_seq(x):
     if x ==1 or x ==0:
         return 1
