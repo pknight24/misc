@@ -22,3 +22,6 @@ getFat w
    | otherwise = "U thic"
 
 getThirds x = [xs | xs <- [1..x]]
+
+
+power x n = (x^n)
