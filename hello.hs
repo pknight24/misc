@@ -16,9 +16,27 @@ firstLet (x:xs) = "The first letter of " ++ (x:xs) ++ " is " ++ [x]
 
 getFat :: Int -> String
 getFat w
-   | w < 10 = "Got damn bre"
-   | w < 20 = "Not bad"
-   | w < 30 = "Solidd"
+   | x < 10 = "Got damn bre"
+   | x < 20 = "Not bad"
+   | x < 30 = "Solidd"
    | otherwise = "U thic"
-
+   where x = 2 * w
 getThirds x = [xs | xs <- [1..x]]
+
+
+
+fib 0 = 0
+fib 1 = 1
+fib x = fib(x-1) + fib(x-2)
+
+maxm [x] = x
+maxm(x:xs)
+    | x > maxTail = x
+    | otherwise = maxTail
+    where maxTail = maxm xs
+
+
+triArea r = pi * (r^2)
+
+getFiv 0 = []
+getFiv n = 5 : getFiv(n-1)
