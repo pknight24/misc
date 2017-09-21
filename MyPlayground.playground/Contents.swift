@@ -2,7 +2,11 @@
 
 import UIKit
 
-var str = "Hello, playground"
-var a = 14
-var b = 45
-var c = a + b
+let apples = 5
+var data = [4, 3, 1, 2]
+print("I have \(apples) apples.")
+for i in data
+{
+    print(i)
+    
+}
