@@ -3,28 +3,28 @@ import java.util.*;
 public class Play
 {
 
-  public static int factorial(int x)
-  {
-   if (x == 0)
-    return 1;
-   else
-    return x * factorial(x-1); 
-  }
+   
   public static void main(String args[])
   {
     Scanner scan = new Scanner(System.in);
-    System.out.print("Enter a number: ");
-    int x = scan.nextInt();
-    switch (x)
+    try
     {
-      case (69):
-        System.out.println("Fam why tho");
-        break;
-      default:
-        int fact_x = factorial(x);
-        System.out.println("Your number factorial is: " + fact_x);
-        break;
+      int x = scan.nextInt();
+      if (x == 0)
+        throw new RuntimeException("Big Mistake pal!");
+      assert (x % 2 == 0) : "Odd numbers are bad";
+    }    
+    catch (RuntimeException e)
+    {
+      System.out.println(e.getMessage());
     }
+    catch (java.lang.AssertionError e)
+    {
+      System.out.println(e.getMessage());
+    }
+   double a = 2.564;
+   int y = 1 + (int) a; 
+   System.out.println(y);
   }
 
 
