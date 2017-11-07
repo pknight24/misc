@@ -6,26 +6,9 @@ public class Play
    
   public static void main(String args[])
   {
-    char a = 'A';
-    System.out.println( (int) a); 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-   
-  
-  
+      int[] nums = new int[10];
+      nums[0] = 15;
+      System.out.println(nums.length);
   }
 
 

@@ -1,7 +1,10 @@
+use std::env;
 fn main()
 {
-    std::process::Command::new("pwd")
-        .status()
-        .expect("Pwd didn't work!");
+    let home = env::home_dir().unwrap();
+    let home = home.to_str().unwrap();
+    println!("{}", home);
+    let x: String = home.to_owned();
+    println!("{}", x);    
 
 }
