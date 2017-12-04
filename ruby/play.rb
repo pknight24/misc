@@ -6,7 +6,7 @@ end
 def fact(n)
 	return n == 0 ? 1 : n*fact(n-1)
 end
-puts fact(5)
+puts fact(156)
 
 
 
@@ -30,7 +30,7 @@ def bottles(n=99)
 end
 
 #disembowler
-print "enter a string to be disembowled: "
-word = gets.chomp
-puts "#{word.delete(' aeiou')}\n#{word.delete('^aeiou')}"
+#print "enter a string to be disembowled: "
+#word = gets.chomp
+#puts "#{word.delete(' aeiou')}\n#{word.delete('^aeiou')}"
 
