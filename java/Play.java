@@ -2,23 +2,20 @@ import java.util.*;
 
 public class Play
 {
-  public static void shit(int x)
-  {
-    System.out.println(x * x);
-  }
-
-  public static void shit(String s)
-  {
-    System.out.println(s);
-  }
-   
+  
   public static void main(String args[])
   {
-      int[] nums = new int[10];
-      nums[0] = 15;
-      System.out.println(nums.length);
-      shit(3);
-      shit("Parker");
+    Deque<String> songs = new LinkedList<String>();
+    songs.add("Song 1");
+    songs.push("Song 2");
+    songs.add("Song 3")
+      ;
+    songs.push("Song 4");
+
+    System.out.println(songs.pop());
+    System.out.println(songs.removeLast());
+    System.out.println(songs.pop());
+    System.out.println(songs.remove());
   }
 
 
