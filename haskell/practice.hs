@@ -14,3 +14,7 @@ fib n = fib (n - 1) + fib (n - 2)
 sigma :: (Int -> Int) -> [Int] -> Int
 sigma _ [] = 0
 sigma f xs = sum $ map f xs
+
+fact :: Int -> Int
+fact 0 = 1
+fact n = n * (fact (n - 1))
