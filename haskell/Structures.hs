@@ -1,3 +1,22 @@
+module Structures
+( Stack(..)
+, Queue(..)
+, push
+, pop
+, add
+, remove
+, Tree(..)
+, singleboy
+, treeInsert
+, treeElem
+, treeInsert
+, treeToList
+, treeFromList
+, treeDepth
+, treeMap
+) where
+
+
 data Stack a = Stack [a] deriving (Show, Eq)
 data Queue a = Queue [a] deriving (Show, Eq)
 
@@ -14,7 +33,7 @@ remove :: (Queue a) -> (Queue a)
 remove (Queue (x:xs)) = (Queue xs)
 
 --recrusively defines a tree
-data Tree a = EmptyTree | Node a (Tree a) (Tree a) deriving (Show)
+data Tree a = EmptyTree | Node a (Tree a) (Tree a) deriving (Show, Eq)
 
 --tree with a node and two empty branches
 singleboy :: a -> Tree a
@@ -55,6 +74,12 @@ treeFromList :: (Ord a) => [a] -> Tree a
 treeFromList [] = EmptyTree
 treeFromList (x:xs) = treeInsert x (treeFromList xs)
 
+--creates a list from a tree
+treeToList :: Tree a -> [a]
+treeToList EmptyTree = []
+treeToList (Node n left right) = (treeToList left) ++ (treeToList right) ++ [n]
 
-myTree :: Tree Int
-myTree = singleboy 10
+--maps a function to every node on a tree
+treeMap :: (a -> a) -> Tree a -> Tree a
+treeMap _ EmptyTree = EmptyTree
+treeMap f (Node n left right) = (Node (f n) (treeMap f left) (treeMap f right))

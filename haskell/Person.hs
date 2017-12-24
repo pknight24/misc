@@ -1,12 +1,15 @@
-data Person = Person String Int deriving (Show)
-parker = Person "Parker" 19
-tina = Person "Tina" 18
+data Gender = Male | Female deriving (Show, Eq, Ord)
+
+data Person = Person String Int Gender deriving (Show)
+
+parker = Person "Parker" 19 Male
+tina = Person "Tina" 18 Female
 
 name :: Person -> String
-name (Person n _) = n
+name (Person n _ _) = n
 
 age :: Person -> Int
-age (Person _ a) = a
+age (Person _ i _) = i
 
-baby :: Person -> Person -> Person
-baby a b  = Person (name a ++ "-" ++ name b) 0
+gender :: Person -> Gender
+gender (Person _ _ g) = g
