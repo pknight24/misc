@@ -9,7 +9,6 @@ module Structures
 , singleboy
 , treeInsert
 , treeElem
-, treeInsert
 , treeToList
 , treeFromList
 , treeDepth
@@ -34,6 +33,7 @@ remove (Queue (x:xs)) = (Queue xs)
 
 --recrusively defines a tree
 data Tree a = EmptyTree | Node a (Tree a) (Tree a) deriving (Show, Eq)
+
 
 --tree with a node and two empty branches
 singleboy :: a -> Tree a
