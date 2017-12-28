@@ -17,3 +17,7 @@ elemLL n (Node x rest)
 insertLL :: a -> LinkedList a -> LinkedList a
 insertLL n Null = Node n Null
 insertLL n (Node x rest) = Node x (insertLL n rest)
+
+instance Functor LinkedList where
+  fmap f Null = Null
+  fmap f (Node a rest) = (Node (f a) (fmap f rest))

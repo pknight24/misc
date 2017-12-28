@@ -83,3 +83,7 @@ treeToList (Node n left right) = (treeToList left) ++ (treeToList right) ++ [n]
 treeMap :: (a -> a) -> Tree a -> Tree a
 treeMap _ EmptyTree = EmptyTree
 treeMap f (Node n left right) = (Node (f n) (treeMap f left) (treeMap f right))
+
+instance Functor Tree where
+  fmap f EmptyTree = EmptyTree
+  fmap f (Node a left right) = (Node (f a) (fmap f left) (fmap f right))
