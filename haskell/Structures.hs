@@ -1,19 +1,4 @@
-module Structures
-( Stack(..)
-, Queue(..)
-, push
-, pop
-, add
-, remove
-, Tree(..)
-, singleboy
-, treeInsert
-, treeElem
-, treeToList
-, treeFromList
-, treeDepth
-, treeMap
-) where
+module Structures where
 
 
 data Stack a = Stack [a] deriving (Show, Eq)

@@ -1,6 +1,8 @@
 --gets all the permutations of a list
 --perm gets permutations, getPerms is used for formatting output
 
+module Perm where
+
 perm :: [a] -> [[a]]
 perm [] = [[]]
 perm [a] = [[a]]
