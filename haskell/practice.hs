@@ -1,5 +1,5 @@
 import Structures
-import Perm
+import Linked
 
 newtype TTT a = TTT a deriving (Show)
 xt = TTT 3
