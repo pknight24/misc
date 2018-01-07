@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 void inc(int *p);
+void pstr(char *c);
+
 struct s
 {
   int val;
@@ -17,15 +19,24 @@ int main()
     printf("value of i: %d\n", i);
     inc(p);
     printf("i incremented: %d\n", i);
-
-    struct s trial;
-    trial.name = "Parker";
-    trial.val = 2;
-    printf("Name = %s\nval = %d\n", trial.name, trial.val);
     
+    char name[] = "Parker";
+    pstr(name);
 }
 
 void inc(int *p)
 {
     *p = *p + 1;
+}
+
+//uses pointer arithmetic to print a string
+void pstr(char *c)
+{
+  if (*c == '\0')
+    printf("\n");
+  else
+  {
+    printf("%c", *c);
+    pstr(c+1);
+  }
 }
