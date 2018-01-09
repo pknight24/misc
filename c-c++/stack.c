@@ -25,7 +25,7 @@ void display_options();
 
 int main()
 {
-
+    return 0;
 }
 
 

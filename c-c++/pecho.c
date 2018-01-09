@@ -2,7 +2,7 @@
 #include <string.h>
 
 int main(int argc, char *argv[])
-	{
+{
       int newline = 0;
 
 		  for (int i = 1;i < argc;i++)
@@ -12,4 +12,4 @@ int main(int argc, char *argv[])
       } 
       printf("\n");
 		  return 0;
-	}
+}
