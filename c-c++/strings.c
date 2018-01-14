@@ -34,7 +34,7 @@ char *reverse(char *string)
     char *r = reversed;
 
     free(reversed);
-    return r;
+    return reversed;
 
 }
 
