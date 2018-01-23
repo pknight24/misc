@@ -2,9 +2,6 @@ import System.Environment
 import Text.Parsec
 import Text.Parsec.String (Parser)
 
-numberString :: Parser [Char]
-numberString = many1 digit
-
 number :: Parser Float
 number = fmap readFloat numberString
   where readFloat = read :: String -> Float
@@ -25,7 +22,7 @@ whitespace = skipMany $ oneOf " \n\t"
 
 term = do
   whitespace
-  n <- number
+  n <- number <|> list
   whitespace
   return n
 
@@ -38,4 +35,10 @@ expr = do
   let operation = convertOp o
   return (foldr1 operation ts)
 
-eval input = parse (many (expr <|> number)) "" input
+eval input = parse list "" input
+
+list = do
+  char '('
+  e <- expr
+  char ')'
+  return e
