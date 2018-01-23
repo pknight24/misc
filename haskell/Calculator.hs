@@ -33,7 +33,7 @@ expr = do
   o <- op
   ts <- terms
   let operation = convertOp o
-  return (foldr1 operation ts)
+  return (foldl1 operation ts)
 
 eval input = parse list "" input
 
