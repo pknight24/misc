@@ -5,6 +5,7 @@ email :: Parser String
 email = do
   nick
   host
+  (many1 anyChar)
 
 nick = manyTill anyChar (char '@')
 

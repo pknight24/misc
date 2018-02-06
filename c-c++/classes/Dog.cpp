@@ -1,19 +1,13 @@
 #include <iostream>
+#include <string>
+#include "Dog.h"
 
 using namespace std;
 
-class Dog
+Dog::Dog(int _age, string _name)
 {
-    int age;
-
-  public:
-    Dog(int a);
-    int getAge();
-};
-
-Dog::Dog(int a)
-{
-    age = a;
+    age = _age;
+    name = _name;
 }
 
 int Dog::getAge()
@@ -21,11 +15,7 @@ int Dog::getAge()
     return age;
 }
 
-int main()
+string Dog::getName()
 {
-    Dog d(12);
-
-    cout << d.getAge() << endl;
-
-    return 0;
+    return name;
 }

@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include "classes/Node.h"
 
 struct apple
 {
@@ -30,6 +30,8 @@ int main()
     std::cout << a.age << " minutes old." << std::endl;
     appleday(&a);
     std::cout << a.age << std::endl;
+
+    Node n(88);
 
     return 0;
 }
